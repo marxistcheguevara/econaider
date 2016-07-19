@@ -6951,3 +6951,1293 @@ I, [2016-07-18T18:50:46.938181 #20680]  INFO -- : worker=0 ready
 [0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
 [0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0035s[0m) /econaider/index_description?idx=4&line=3 - [1;9m200[0m OK
 62.217.137.50 - - [19/Jul/2016:12:29:25 +0000] "GET /econaider/index_description?idx=4&line=3 HTTP/1.0" 200 20 0.0045
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0040s[0m) /econaider/needs?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:38 +0000] "GET /econaider/needs?line=2 HTTP/1.0" 200 133 0.0050
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.2ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0089s[0m) /econaider/staffs?line=2 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0026s[0m) /econaider/services?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:38 +0000] "GET /econaider/staffs?line=2 HTTP/1.0" 200 665 0.0104
+62.217.137.50 - - [19/Jul/2016:12:42:38 +0000] "GET /econaider/services?line=2 HTTP/1.0" 200 2 0.0074
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.2ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0057s[0m) /econaider/strategies?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:38 +0000] "GET /econaider/strategies?line=2 HTTP/1.0" 200 1216 0.0068
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.2ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+2016-07-19 12:42:39 - NoMethodError - undefined method `keys' for nil:NilClass:
+	/home/futbolpress/webapps/econaider/app/controllers/econaider.rb:62:in `block (2 levels) in <top (required)>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:517:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:517:in `block in route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:992:in `block in invoke_route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:987:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:987:in `invoke_route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:952:in `block in route!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:53:in `block in call_by_request'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:84:in `block in rotation'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `loop'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `with_object'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `rotation'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:49:in `call_by_request'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router.rb:43:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:949:in `route!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:932:in `block in dispatch!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:930:in `dispatch!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:907:in `block in call!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:907:in `call!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:895:in `call'
+	/home/futbolpress/webapps/econaider/lib/connection_pool_management_middleware.rb:7:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+	/home/futbolpress/webapps/econaider/lib/connection_pool_management_middleware.rb:7:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/reloader/rack.rb:25:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/logger.rb:470:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/show_exceptions.rb:25:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:2013:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1487:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1787:in `synchronize'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1487:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:84:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `each'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/tempfile_reaper.rb:15:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/lint.rb:49:in `_call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/lint.rb:37:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/showexceptions.rb:24:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:219:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/chunked.rb:54:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:562:in `process_client'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:658:in `worker_loop'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:132:in `start'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/bin/unicorn:126:in `<top (required)>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/unicorn:23:in `load'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/unicorn:23:in `<main>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+62.217.137.50 - - [19/Jul/2016:12:42:39 +0000] "GET /econaider/results?line=2&place=1&line_area=&exchange=1&factor=1&capital_type=1&personal_cap=&csi=1&popi=2&staffs=&needs=&ads=&growth=0 HTTP/1.0" 500 190201 0.0473
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0042s[0m) /econaider/needs?line=1 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:48 +0000] "GET /econaider/needs?line=1 HTTP/1.0" 200 133 0.0053
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.2ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0062s[0m) /econaider/staffs?line=1 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:48 +0000] "GET /econaider/staffs?line=1 HTTP/1.0" 200 1202 0.0074
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.2ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0089s[0m) /econaider/strategies?line=1 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:48 +0000] "GET /econaider/strategies?line=1 HTTP/1.0" 200 1216 0.0101
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0049s[0m) /econaider/services?line=1 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:48 +0000] "GET /econaider/services?line=1 HTTP/1.0" 200 574 0.0060
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0039s[0m) /econaider/services?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:54 +0000] "GET /econaider/services?line=2 HTTP/1.0" 200 2 0.0049
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0043s[0m) /econaider/needs?line=2 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.2ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0035s[0m) /econaider/staffs?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:54 +0000] "GET /econaider/needs?line=2 HTTP/1.0" 200 133 0.0099
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+62.217.137.50 - - [19/Jul/2016:12:42:54 +0000] "GET /econaider/staffs?line=2 HTTP/1.0" 200 665 0.0093
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.2ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0087s[0m) /econaider/strategies?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:54 +0000] "GET /econaider/strategies?line=2 HTTP/1.0" 200 1216 0.0096
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.2ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0057s[0m) /econaider/strategies?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:57 +0000] "GET /econaider/strategies?line=3 HTTP/1.0" 200 1208 0.0068
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0078s[0m) /econaider/services?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:57 +0000] "GET /econaider/services?line=3 HTTP/1.0" 200 432 0.0089
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0165s[0m) /econaider/needs?line=3 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (1.8ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0053s[0m) /econaider/staffs?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:42:57 +0000] "GET /econaider/needs?line=3 HTTP/1.0" 200 1495 0.0212
+62.217.137.50 - - [19/Jul/2016:12:42:57 +0000] "GET /econaider/staffs?line=3 HTTP/1.0" 200 527 0.0065
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0051s[0m) /econaider/needs?line=2 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (2.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 2]]
+62.217.137.50 - - [19/Jul/2016:12:43:00 +0000] "GET /econaider/needs?line=2 HTTP/1.0" 200 133 0.0083
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0029s[0m) /econaider/services?line=2 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0196s[0m) /econaider/strategies?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:43:00 +0000] "GET /econaider/strategies?line=2 HTTP/1.0" 200 1216 0.0213
+62.217.137.50 - - [19/Jul/2016:12:43:00 +0000] "GET /econaider/services?line=2 HTTP/1.0" 200 2 0.0079
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.2ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0063s[0m) /econaider/staffs?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:43:00 +0000] "GET /econaider/staffs?line=2 HTTP/1.0" 200 665 0.0083
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+2016-07-19 12:43:02 - NoMethodError - undefined method `keys' for nil:NilClass:
+	/home/futbolpress/webapps/econaider/app/controllers/econaider.rb:62:in `block (2 levels) in <top (required)>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:517:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:517:in `block in route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:992:in `block in invoke_route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:987:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:987:in `invoke_route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:952:in `block in route!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:53:in `block in call_by_request'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:84:in `block in rotation'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `loop'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `with_object'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `rotation'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:49:in `call_by_request'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router.rb:43:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:949:in `route!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:932:in `block in dispatch!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:930:in `dispatch!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:907:in `block in call!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:907:in `call!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:895:in `call'
+	/home/futbolpress/webapps/econaider/lib/connection_pool_management_middleware.rb:7:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+	/home/futbolpress/webapps/econaider/lib/connection_pool_management_middleware.rb:7:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/reloader/rack.rb:25:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/logger.rb:470:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/show_exceptions.rb:25:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:2013:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1487:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1787:in `synchronize'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1487:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:84:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `each'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/tempfile_reaper.rb:15:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/lint.rb:49:in `_call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/lint.rb:37:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/showexceptions.rb:24:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:219:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/chunked.rb:54:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:562:in `process_client'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:658:in `worker_loop'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:132:in `start'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/bin/unicorn:126:in `<top (required)>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/unicorn:23:in `load'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/unicorn:23:in `<main>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+62.217.137.50 - - [19/Jul/2016:12:43:02 +0000] "GET /econaider/results?line=2&place=1&line_area=&exchange=1&factor=1&capital_type=1&personal_cap=&csi=1&popi=2&staffs=&needs=&ads=&growth=0 HTTP/1.0" 500 190201 0.0439
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0101s[0m) /econaider/needs?line=1 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 1]]
+62.217.137.50 - - [19/Jul/2016:12:45:09 +0000] "GET /econaider/needs?line=1 HTTP/1.0" 200 133 0.0132
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0066s[0m) /econaider/services?line=1 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:45:09 +0000] "GET /econaider/services?line=1 HTTP/1.0" 200 574 0.0096
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.2ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.2ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0082s[0m) /econaider/strategies?line=1 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0125s[0m) /econaider/staffs?line=1 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:45:09 +0000] "GET /econaider/strategies?line=1 HTTP/1.0" 200 1216 0.0119
+62.217.137.50 - - [19/Jul/2016:12:45:09 +0000] "GET /econaider/staffs?line=1 HTTP/1.0" 200 1202 0.0151
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/index
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT "lines".* FROM "lines"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT "factors".* FROM "factors"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0118s[0m) /econaider - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:51:19 +0000] "GET /econaider HTTP/1.0" 200 13894 0.0134
+62.217.137.50 - - [19/Jul/2016:12:51:20 +0000] "GET /favicon.ico HTTP/1.0" 200 3784 0.0039
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.4ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0003s[0m) /econaider/index
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT "lines".* FROM "lines"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT "factors".* FROM "factors"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0163s[0m) /econaider - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:12:51:25 +0000] "GET /econaider HTTP/1.0" 200 13894 0.0188
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.7ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0006s[0m) /econaider/index
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT "lines".* FROM "lines"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT "factors".* FROM "factors"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0166s[0m) /econaider - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:12:52:21 +0000] "GET /econaider HTTP/1.0" 200 13894 0.0191
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0062s[0m) /econaider/services?line=3 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 3]]
+109.205.165.67 - - [19/Jul/2016:12:54:19 +0000] "GET /econaider/services?line=3 HTTP/1.0" 200 432 0.0113
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0026s[0m) /econaider/staffs?line=3 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0111s[0m) /econaider/needs?line=3 - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:12:54:19 +0000] "GET /econaider/staffs?line=3 HTTP/1.0" 200 527 0.0048
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 3]]
+109.205.165.67 - - [19/Jul/2016:12:54:19 +0000] "GET /econaider/needs?line=3 HTTP/1.0" 200 1495 0.0152
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0037s[0m) /econaider/strategies?line=3 - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:12:54:19 +0000] "GET /econaider/strategies?line=3 HTTP/1.0" 200 1208 0.0045
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0040s[0m) /econaider/rooms_division?area=1&line=3 - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:12:54:38 +0000] "GET /econaider/rooms_division?area=1&line=3 HTTP/1.0" 200 119 0.0050
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0045s[0m) /econaider/rooms_division?area=100&line=3 - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:12:54:48 +0000] "GET /econaider/rooms_division?area=100&line=3 HTTP/1.0" 200 123 0.0057
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/index
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT "lines".* FROM "lines"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT "factors".* FROM "factors"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0126s[0m) /econaider - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:57:06 +0000] "GET /econaider HTTP/1.0" 200 13894 0.0142
+62.217.137.50 - - [19/Jul/2016:12:57:07 +0000] "GET /favicon.ico HTTP/1.0" 200 3784 0.0029
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0003s[0m) /econaider/index
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT "lines".* FROM "lines"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT "factors".* FROM "factors"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0113s[0m) /econaider - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:57:30 +0000] "GET /econaider HTTP/1.0" 200 13894 0.0129
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0052s[0m) /econaider/needs?line=2 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0068s[0m) /econaider/staffs?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:57:43 +0000] "GET /econaider/needs?line=2 HTTP/1.0" 200 133 0.0113
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0024s[0m) /econaider/services?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:57:43 +0000] "GET /econaider/staffs?line=2 HTTP/1.0" 200 665 0.0114
+62.217.137.50 - - [19/Jul/2016:12:57:43 +0000] "GET /econaider/services?line=2 HTTP/1.0" 200 2 0.0036
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0044s[0m) /econaider/strategies?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:57:43 +0000] "GET /econaider/strategies?line=2 HTTP/1.0" 200 1216 0.0055
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0044s[0m) /econaider/strategies?line=3 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0104s[0m) /econaider/needs?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:57:46 +0000] "GET /econaider/needs?line=3 HTTP/1.0" 200 1495 0.0114
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0027s[0m) /econaider/staffs?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:57:46 +0000] "GET /econaider/strategies?line=3 HTTP/1.0" 200 1208 0.0095
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0024s[0m) /econaider/services?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:57:46 +0000] "GET /econaider/staffs?line=3 HTTP/1.0" 200 527 0.0067
+62.217.137.50 - - [19/Jul/2016:12:57:46 +0000] "GET /econaider/services?line=3 HTTP/1.0" 200 432 0.0033
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0183s[0m) /econaider/results?line=3&place=1&line_area=&exchange=1&factor=1&capital_type=1&personal_cap=&csi=1&popi=2&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:58:18 +0000] "GET /econaider/results?line=3&place=1&line_area=&exchange=1&factor=1&capital_type=1&personal_cap=&csi=1&popi=2&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= HTTP/1.0" 200 24591 0.0203
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0028s[0m) /econaider/index_description?idx=1&line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:58:19 +0000] "GET /econaider/index_description?idx=1&line=3 HTTP/1.0" 200 17 0.0038
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0034s[0m) /econaider/index_description?idx=2&line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:58:19 +0000] "GET /econaider/index_description?idx=2&line=3 HTTP/1.0" 200 17 0.0045
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0040s[0m) /econaider/rooms_division?area=50&line=3 - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:12:58:33 +0000] "GET /econaider/rooms_division?area=50&line=3 HTTP/1.0" 200 120 0.0049
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 6]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.3ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 6]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0076s[0m) /econaider/needs?line=6 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0109s[0m) /econaider/staffs?line=6 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:58:53 +0000] "GET /econaider/needs?line=6 HTTP/1.0" 200 2 0.0097
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+62.217.137.50 - - [19/Jul/2016:12:58:53 +0000] "GET /econaider/staffs?line=6 HTTP/1.0" 200 957 0.0144
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 6]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0046s[0m) /econaider/services?line=6 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:58:53 +0000] "GET /econaider/services?line=6 HTTP/1.0" 200 1243 0.0055
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.2ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 6]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0043s[0m) /econaider/strategies?line=6 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:58:53 +0000] "GET /econaider/strategies?line=6 HTTP/1.0" 200 1216 0.0054
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0040s[0m) /econaider/rooms_division?area=100&line=3 - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:12:58:57 +0000] "GET /econaider/rooms_division?area=100&line=3 HTTP/1.0" 200 123 0.0050
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."line_id" = ?[0m  [["line_id", 6]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0037s[0m) /econaider/rooms_division?area=-1&line=6 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:59:01 +0000] "GET /econaider/rooms_division?area=-1&line=6 HTTP/1.0" 200 2 0.0046
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."line_id" = ?[0m  [["line_id", 6]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0041s[0m) /econaider/rooms_division?area=-2&line=6 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:59:02 +0000] "GET /econaider/rooms_division?area=-2&line=6 HTTP/1.0" 200 2 0.0051
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."line_id" = ?[0m  [["line_id", 6]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0035s[0m) /econaider/rooms_division?area=-1&line=6 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:59:04 +0000] "GET /econaider/rooms_division?area=-1&line=6 HTTP/1.0" 200 2 0.0045
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."line_id" = ?[0m  [["line_id", 6]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0033s[0m) /econaider/rooms_division?area=0&line=6 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:59:04 +0000] "GET /econaider/rooms_division?area=0&line=6 HTTP/1.0" 200 2 0.0043
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."line_id" = ?[0m  [["line_id", 6]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0047s[0m) /econaider/rooms_division?area=-1&line=6 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:12:59:07 +0000] "GET /econaider/rooms_division?area=-1&line=6 HTTP/1.0" 200 2 0.0061
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0173s[0m) /econaider/results?line=3&place=1&line_area=100&exchange=1&factor=1&capital_type=3&personal_cap=1000&credit_amount=20000&csi=1&popi=2&staffs=1850&needs=15475&ads=20400&growth=0&services%5B1%5D=5&services%5B2%5D=12&services%5B3%5D=10 - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:13:00:16 +0000] "GET /econaider/results?line=3&place=1&line_area=100&exchange=1&factor=1&capital_type=3&personal_cap=1000&credit_amount=20000&csi=1&popi=2&staffs=1850&needs=15475&ads=20400&growth=0&services%5B1%5D=5&services%5B2%5D=12&services%5B3%5D=10 HTTP/1.0" 200 24752 0.0195
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/index
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT "lines".* FROM "lines"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT "factors".* FROM "factors"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0132s[0m) /econaider - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:03:08 +0000] "GET /econaider HTTP/1.0" 200 13894 0.0158
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0070s[0m) /econaider/needs?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:03:18 +0000] "GET /econaider/needs?line=3 HTTP/1.0" 200 1495 0.0084
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0044s[0m) /econaider/staffs?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:03:18 +0000] "GET /econaider/staffs?line=3 HTTP/1.0" 200 527 0.0054
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0062s[0m) /econaider/services?line=3 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0064s[0m) /econaider/strategies?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:03:18 +0000] "GET /econaider/services?line=3 HTTP/1.0" 200 432 0.0100
+62.217.137.50 - - [19/Jul/2016:13:03:18 +0000] "GET /econaider/strategies?line=3 HTTP/1.0" 200 1208 0.0075
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.2ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0229s[0m) /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=5000&csi=5&popi=6&staffs=&needs=&ads=&growth=0&services[1]=&services[2]=&services[3]= - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:32 +0000] "GET /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=5000&csi=5&popi=6&staffs=&needs=&ads=&growth=0&services[1]=&services[2]=&services[3]= HTTP/1.0" 200 24663 0.0249
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0031s[0m) /econaider/index_description?idx=5&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:33 +0000] "GET /econaider/index_description?idx=5&line=3 HTTP/1.0" 200 13 0.0042
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0026s[0m) /econaider/index_description?idx=6&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:33 +0000] "GET /econaider/index_description?idx=6&line=3 HTTP/1.0" 200 30 0.0038
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0003s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0187s[0m) /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=5000&csi=3&popi=6&staffs=&needs=&ads=&growth=0&services[1]=&services[2]=&services[3]= - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:35 +0000] "GET /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=5000&csi=3&popi=6&staffs=&needs=&ads=&growth=0&services[1]=&services[2]=&services[3]= HTTP/1.0" 200 24663 0.0208
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0031s[0m) /econaider/index_description?idx=6&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:35 +0000] "GET /econaider/index_description?idx=6&line=3 HTTP/1.0" 200 30 0.0042
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0025s[0m) /econaider/index_description?idx=3&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:35 +0000] "GET /econaider/index_description?idx=3&line=3 HTTP/1.0" 200 20 0.0036
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.5ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.2ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0003s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0266s[0m) /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=5000&csi=3&popi=2&staffs=&needs=&ads=&growth=0&services[1]=&services[2]=&services[3]= - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:37 +0000] "GET /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=5000&csi=3&popi=2&staffs=&needs=&ads=&growth=0&services[1]=&services[2]=&services[3]= HTTP/1.0" 200 24663 0.0295
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0051s[0m) /econaider/index_description?idx=3&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:37 +0000] "GET /econaider/index_description?idx=3&line=3 HTTP/1.0" 200 20 0.0067
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0025s[0m) /econaider/index_description?idx=2&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:38 +0000] "GET /econaider/index_description?idx=2&line=3 HTTP/1.0" 200 17 0.0037
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/index
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT "lines".* FROM "lines"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT "factors".* FROM "factors"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0134s[0m) /econaider/ - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:43 +0000] "GET /econaider/ HTTP/1.0" 200 13877 0.0151
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0057s[0m) /econaider/needs?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:45 +0000] "GET /econaider/needs?line=3 HTTP/1.0" 200 1495 0.0067
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0046s[0m) /econaider/staffs?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:45 +0000] "GET /econaider/staffs?line=3 HTTP/1.0" 200 527 0.0057
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0037s[0m) /econaider/services?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:45 +0000] "GET /econaider/services?line=3 HTTP/1.0" 200 432 0.0047
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0042s[0m) /econaider/strategies?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:45 +0000] "GET /econaider/strategies?line=3 HTTP/1.0" 200 1208 0.0052
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0063s[0m) /econaider/rooms_division?area=5000&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:04:50 +0000] "GET /econaider/rooms_division?area=5000&line=3 HTTP/1.0" 200 134 0.0078
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0193s[0m) /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=1800&csi=1&popi=2&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:05:02 +0000] "GET /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=1800&csi=1&popi=2&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= HTTP/1.0" 200 24663 0.0216
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0032s[0m) /econaider/index_description?idx=2&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:05:02 +0000] "GET /econaider/index_description?idx=2&line=3 HTTP/1.0" 200 17 0.0043
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0026s[0m) /econaider/index_description?idx=1&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:05:03 +0000] "GET /econaider/index_description?idx=1&line=3 HTTP/1.0" 200 17 0.0036
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0167s[0m) /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=1800&csi=3&popi=2&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:05:06 +0000] "GET /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=1800&csi=3&popi=2&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= HTTP/1.0" 200 24663 0.0189
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0030s[0m) /econaider/index_description?idx=3&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:05:06 +0000] "GET /econaider/index_description?idx=3&line=3 HTTP/1.0" 200 20 0.0040
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0025s[0m) /econaider/index_description?idx=2&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:05:06 +0000] "GET /econaider/index_description?idx=2&line=3 HTTP/1.0" 200 17 0.0035
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.2ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0172s[0m) /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=1800&csi=3&popi=6&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:05:08 +0000] "GET /econaider/results?line=3&place=1&line_area=5000&exchange=1&factor=1&capital_type=1&personal_cap=1800&csi=3&popi=6&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= HTTP/1.0" 200 24663 0.0193
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0031s[0m) /econaider/index_description?idx=3&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:05:08 +0000] "GET /econaider/index_description?idx=3&line=3 HTTP/1.0" 200 20 0.0041
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0025s[0m) /econaider/index_description?idx=6&line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:05:09 +0000] "GET /econaider/index_description?idx=6&line=3 HTTP/1.0" 200 30 0.0035
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.2ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 4]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 4]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0060s[0m) /econaider/needs?line=4 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0116s[0m) /econaider/staffs?line=4 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:05:33 +0000] "GET /econaider/needs?line=4 HTTP/1.0" 200 265 0.0082
+62.217.137.50 - - [19/Jul/2016:13:05:33 +0000] "GET /econaider/staffs?line=4 HTTP/1.0" 200 1781 0.0133
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.2ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 4]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 4]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0078s[0m) /econaider/strategies?line=4 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0060s[0m) /econaider/services?line=4 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:05:33 +0000] "GET /econaider/strategies?line=4 HTTP/1.0" 200 1216 0.0105
+62.217.137.50 - - [19/Jul/2016:13:05:33 +0000] "GET /econaider/services?line=4 HTTP/1.0" 200 2664 0.0113
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0080s[0m) /econaider/services?line=3 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 3]]
+62.217.137.50 - - [19/Jul/2016:13:05:37 +0000] "GET /econaider/services?line=3 HTTP/1.0" 200 432 0.0112
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0029s[0m) /econaider/staffs?line=3 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0117s[0m) /econaider/needs?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:05:37 +0000] "GET /econaider/needs?line=3 HTTP/1.0" 200 1495 0.0127
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.2ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 3]]
+62.217.137.50 - - [19/Jul/2016:13:05:37 +0000] "GET /econaider/staffs?line=3 HTTP/1.0" 200 527 0.0079
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0036s[0m) /econaider/strategies?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:05:37 +0000] "GET /econaider/strategies?line=3 HTTP/1.0" 200 1208 0.0044
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.2ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0176s[0m) /econaider/results?line=3&place=1&line_area=100&exchange=1&factor=1&capital_type=3&personal_cap=1000&credit_amount=20000&csi=1&popi=2&staffs=1850&needs=15475&ads=20400&growth=0&services%5B1%5D=5&services%5B2%5D=12&services%5B3%5D=10 - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:13:06:10 +0000] "GET /econaider/results?line=3&place=1&line_area=100&exchange=1&factor=1&capital_type=3&personal_cap=1000&credit_amount=20000&csi=1&popi=2&staffs=1850&needs=15475&ads=20400&growth=0&services%5B1%5D=5&services%5B2%5D=12&services%5B3%5D=10 HTTP/1.0" 200 24752 0.0199
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0174s[0m) /econaider/results?line=3&place=1&line_area=&exchange=1&factor=1&capital_type=1&personal_cap=&csi=1&popi=2&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:06:19 +0000] "GET /econaider/results?line=3&place=1&line_area=&exchange=1&factor=1&capital_type=1&personal_cap=&csi=1&popi=2&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= HTTP/1.0" 200 24591 0.0194
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0033s[0m) /econaider/index_description?idx=1&line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:06:19 +0000] "GET /econaider/index_description?idx=1&line=3 HTTP/1.0" 200 17 0.0044
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0026s[0m) /econaider/index_description?idx=2&line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:06:19 +0000] "GET /econaider/index_description?idx=2&line=3 HTTP/1.0" 200 17 0.0036
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0044s[0m) /econaider/rooms_division?area=99&line=3 - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:13:07:00 +0000] "GET /econaider/rooms_division?area=99&line=3 HTTP/1.0" 200 121 0.0055
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0178s[0m) /econaider/results?line=3&place=1&line_area=99&exchange=1&factor=1&capital_type=3&personal_cap=1000&credit_amount=20000&csi=1&popi=2&staffs=1850&needs=15475&ads=20400&growth=0&services%5B1%5D=5&services%5B2%5D=12&services%5B3%5D=10 - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:13:07:04 +0000] "GET /econaider/results?line=3&place=1&line_area=99&exchange=1&factor=1&capital_type=3&personal_cap=1000&credit_amount=20000&csi=1&popi=2&staffs=1850&needs=15475&ads=20400&growth=0&services%5B1%5D=5&services%5B2%5D=12&services%5B3%5D=10 HTTP/1.0" 200 24752 0.0202
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+2016-07-19 13:08:04 - NoMethodError - undefined method `keys' for nil:NilClass:
+	/home/futbolpress/webapps/econaider/app/controllers/econaider.rb:62:in `block (2 levels) in <top (required)>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:517:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:517:in `block in route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:992:in `block in invoke_route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:987:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:987:in `invoke_route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:952:in `block in route!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:53:in `block in call_by_request'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:84:in `block in rotation'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `loop'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `with_object'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `rotation'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:49:in `call_by_request'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router.rb:43:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:949:in `route!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:932:in `block in dispatch!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:930:in `dispatch!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:907:in `block in call!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:907:in `call!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:895:in `call'
+	/home/futbolpress/webapps/econaider/lib/connection_pool_management_middleware.rb:7:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+	/home/futbolpress/webapps/econaider/lib/connection_pool_management_middleware.rb:7:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/reloader/rack.rb:25:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/logger.rb:470:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/show_exceptions.rb:25:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:2013:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1487:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1787:in `synchronize'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1487:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:84:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `each'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/tempfile_reaper.rb:15:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/lint.rb:49:in `_call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/lint.rb:37:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/showexceptions.rb:24:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:219:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/chunked.rb:54:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:562:in `process_client'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:658:in `worker_loop'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:132:in `start'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/bin/unicorn:126:in `<top (required)>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/unicorn:23:in `load'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/unicorn:23:in `<main>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+62.217.137.50 - - [19/Jul/2016:13:08:04 +0000] "GET /econaider/results?line=3&place=1&line_area=&exchange=1&factor=1&capital_type=1&personal_cap=&csi=1&popi=2&staffs=&needs=&ads=&growth=0 HTTP/1.0" 500 190201 0.0397
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.2ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0003s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0178s[0m) /econaider/results?line=3&place=1&line_area=99&exchange=1&factor=1&capital_type=3&personal_cap=1000&credit_amount=20000&csi=1&popi=2&staffs=1850&needs=15475&ads=20400&growth=0&services%5B1%5D=5&services%5B2%5D=12&services%5B3%5D=10 - [1;9m200[0m OK
+109.205.165.67 - - [19/Jul/2016:13:08:08 +0000] "GET /econaider/results?line=3&place=1&line_area=99&exchange=1&factor=1&capital_type=3&personal_cap=1000&credit_amount=20000&csi=1&popi=2&staffs=1850&needs=15475&ads=20400&growth=0&services%5B1%5D=5&services%5B2%5D=12&services%5B3%5D=10 HTTP/1.0" 200 24752 0.0199
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+2016-07-19 13:08:10 - NoMethodError - undefined method `keys' for nil:NilClass:
+	/home/futbolpress/webapps/econaider/app/controllers/econaider.rb:62:in `block (2 levels) in <top (required)>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:517:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:517:in `block in route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:992:in `block in invoke_route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:987:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:987:in `invoke_route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:952:in `block in route!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:53:in `block in call_by_request'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:84:in `block in rotation'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `loop'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `with_object'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `rotation'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:49:in `call_by_request'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router.rb:43:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:949:in `route!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:932:in `block in dispatch!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:930:in `dispatch!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:907:in `block in call!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:907:in `call!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:895:in `call'
+	/home/futbolpress/webapps/econaider/lib/connection_pool_management_middleware.rb:7:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+	/home/futbolpress/webapps/econaider/lib/connection_pool_management_middleware.rb:7:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/reloader/rack.rb:25:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/logger.rb:470:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/show_exceptions.rb:25:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:2013:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1487:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1787:in `synchronize'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1487:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:84:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `each'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/tempfile_reaper.rb:15:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/lint.rb:49:in `_call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/lint.rb:37:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/showexceptions.rb:24:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:219:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/chunked.rb:54:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:562:in `process_client'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:658:in `worker_loop'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:132:in `start'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/bin/unicorn:126:in `<top (required)>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/unicorn:23:in `load'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/unicorn:23:in `<main>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+62.217.137.50 - - [19/Jul/2016:13:08:10 +0000] "GET /econaider/results?line=3&place=1&line_area=&exchange=1&factor=1&capital_type=1&personal_cap=&csi=1&popi=2&staffs=&needs=&ads=&growth=0 HTTP/1.0" 500 190201 0.0463
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.4ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.2ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0048s[0m) /econaider/staffs?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:08:17 +0000] "GET /econaider/staffs?line=2 HTTP/1.0" 200 665 0.0058
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0025s[0m) /econaider/needs?line=2 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0072s[0m) /econaider/services?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:08:17 +0000] "GET /econaider/services?line=2 HTTP/1.0" 200 2 0.0082
+62.217.137.50 - - [19/Jul/2016:13:08:17 +0000] "GET /econaider/needs?line=2 HTTP/1.0" 200 133 0.0038
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.2ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 2]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0048s[0m) /econaider/strategies?line=2 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:08:17 +0000] "GET /econaider/strategies?line=2 HTTP/1.0" 200 1216 0.0060
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+2016-07-19 13:08:19 - NoMethodError - undefined method `keys' for nil:NilClass:
+	/home/futbolpress/webapps/econaider/app/controllers/econaider.rb:62:in `block (2 levels) in <top (required)>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:517:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:517:in `block in route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:992:in `block in invoke_route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:987:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:987:in `invoke_route'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:952:in `block in route!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:53:in `block in call_by_request'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:84:in `block in rotation'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `loop'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `with_object'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:83:in `rotation'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router/compiler.rb:49:in `call_by_request'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/path_router.rb:43:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:949:in `route!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:932:in `block in dispatch!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/application/routing.rb:930:in `dispatch!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:907:in `block in call!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `block in invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `catch'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1067:in `invoke'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:907:in `call!'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:895:in `call'
+	/home/futbolpress/webapps/econaider/lib/connection_pool_management_middleware.rb:7:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+	/home/futbolpress/webapps/econaider/lib/connection_pool_management_middleware.rb:7:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/json_csrf.rb:18:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/base.rb:49:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-protection-1.5.3/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/reloader/rack.rb:25:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/logger.rb:470:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/show_exceptions.rb:25:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:2013:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1487:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1787:in `synchronize'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:1487:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:84:in `block in call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `each'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/padrino-core-0.13.1/lib/padrino-core/router.rb:75:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/tempfile_reaper.rb:15:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/lint.rb:49:in `_call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/lint.rb:37:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/showexceptions.rb:24:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/commonlogger.rb:33:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/sinatra-1.4.7/lib/sinatra/base.rb:219:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/chunked.rb:54:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:562:in `process_client'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:658:in `worker_loop'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/lib/unicorn/http_server.rb:132:in `start'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/gems/unicorn-5.1.0/bin/unicorn:126:in `<top (required)>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/unicorn:23:in `load'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/unicorn:23:in `<main>'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	/home/futbolpress/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+62.217.137.50 - - [19/Jul/2016:13:08:19 +0000] "GET /econaider/results?line=2&place=1&line_area=&exchange=1&factor=1&capital_type=1&personal_cap=&csi=1&popi=2&staffs=&needs=&ads=&growth=0 HTTP/1.0" 500 190201 0.0453
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.2ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0052s[0m) /econaider/strategies?line=3 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 3]]
+62.217.137.50 - - [19/Jul/2016:13:08:24 +0000] "GET /econaider/strategies?line=3 HTTP/1.0" 200 1208 0.0110
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0095s[0m) /econaider/needs?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:08:24 +0000] "GET /econaider/needs?line=3 HTTP/1.0" 200 1495 0.0107
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0073s[0m) /econaider/services?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:08:24 +0000] "GET /econaider/services?line=3 HTTP/1.0" 200 432 0.0082
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0036s[0m) /econaider/staffs?line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:08:24 +0000] "GET /econaider/staffs?line=3 HTTP/1.0" 200 527 0.0044
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT  "factors".* FROM "factors" WHERE "factors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT  "services".* FROM "services" WHERE "services"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/results
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0173s[0m) /econaider/results?line=3&place=1&line_area=&exchange=1&factor=1&capital_type=1&personal_cap=&csi=1&popi=2&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:08:26 +0000] "GET /econaider/results?line=3&place=1&line_area=&exchange=1&factor=1&capital_type=1&personal_cap=&csi=1&popi=2&staffs=&needs=&ads=&growth=0&services%5B1%5D=&services%5B2%5D=&services%5B3%5D= HTTP/1.0" 200 24591 0.0194
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0030s[0m) /econaider/index_description?idx=2&line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:08:27 +0000] "GET /econaider/index_description?idx=2&line=3 HTTP/1.0" 200 17 0.0040
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT  "business_indices".* FROM "business_indices" WHERE "business_indices"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0024s[0m) /econaider/index_description?idx=1&line=3 - [1;9m200[0m OK
+62.217.137.50 - - [19/Jul/2016:13:08:27 +0000] "GET /econaider/index_description?idx=1&line=3 HTTP/1.0" 200 17 0.0034
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0019s[0m) /econaider/r - [1;9m404[0m Not Found
+158.181.40.55 - - [19/Jul/2016:13:11:37 +0000] "GET /econaider/r HTTP/1.0" 404 521 0.0032
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0023s[0m) /__sinatra__/404.png - [1;9m304[0m Not Modified
+158.181.40.55 - - [19/Jul/2016:13:11:38 +0000] "GET /__sinatra__/404.png HTTP/1.0" 304 - 0.0038
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.3ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.1ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/index
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT "lines".* FROM "lines"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT "factors".* FROM "factors"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0117s[0m) /econaider/ - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:11:40 +0000] "GET /econaider/ HTTP/1.0" 200 13877 0.0132
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0070s[0m) /econaider/needs?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:11:43 +0000] "GET /econaider/needs?line=3 HTTP/1.0" 200 1495 0.0082
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0042s[0m) /econaider/staffs?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:11:43 +0000] "GET /econaider/staffs?line=3 HTTP/1.0" 200 527 0.0052
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0035s[0m) /econaider/services?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:11:43 +0000] "GET /econaider/services?line=3 HTTP/1.0" 200 432 0.0045
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0050s[0m) /econaider/strategies?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:11:43 +0000] "GET /econaider/strategies?line=3 HTTP/1.0" 200 1208 0.0061
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.3ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0075s[0m) /econaider/needs?line=1 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:13:29 +0000] "GET /econaider/needs?line=1 HTTP/1.0" 200 2458 0.0087
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0052s[0m) /econaider/staffs?line=1 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:13:29 +0000] "GET /econaider/staffs?line=1 HTTP/1.0" 200 1202 0.0062
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0036s[0m) /econaider/services?line=1 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:13:29 +0000] "GET /econaider/services?line=1 HTTP/1.0" 200 574 0.0046
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0037s[0m) /econaider/strategies?line=1 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:13:29 +0000] "GET /econaider/strategies?line=1 HTTP/1.0" 200 1216 0.0047
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /base/index
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0001s[0m) /layouts/application
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0819s[0m) /admin/ - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:14:02 +0000] "GET / HTTP/1.0" 200 7916 0.0834
+158.181.40.55 - - [19/Jul/2016:13:14:02 +0000] "GET /stylesheets/bootstrap.css?1468805068 HTTP/1.0" 304 - 0.0023
+158.181.40.55 - - [19/Jul/2016:13:14:02 +0000] "GET /stylesheets/application.css?1468805068 HTTP/1.0" 304 - 0.0017
+158.181.40.55 - - [19/Jul/2016:13:14:02 +0000] "GET /javascripts/jquery-1.11.0.min.js?1468805068 HTTP/1.0" 304 - 0.0017
+158.181.40.55 - - [19/Jul/2016:13:14:02 +0000] "GET /javascripts/bootstrap/affix.js?1468805068 HTTP/1.0" 304 - 0.0013
+158.181.40.55 - - [19/Jul/2016:13:14:02 +0000] "GET /javascripts/bootstrap/alert.js?1468805068 HTTP/1.0" 304 - 0.0015
+158.181.40.55 - - [19/Jul/2016:13:14:02 +0000] "GET /javascripts/bootstrap/button.js?1468805068 HTTP/1.0" 304 - 0.0014
+158.181.40.55 - - [19/Jul/2016:13:14:02 +0000] "GET /javascripts/bootstrap/carousel.js?1468805068 HTTP/1.0" 304 - 0.0012
+158.181.40.55 - - [19/Jul/2016:13:14:02 +0000] "GET /javascripts/bootstrap/collapse.js?1468805068 HTTP/1.0" 304 - 0.0016
+158.181.40.55 - - [19/Jul/2016:13:14:02 +0000] "GET /javascripts/bootstrap/dropdown.js?1468805068 HTTP/1.0" 304 - 0.0016
+158.181.40.55 - - [19/Jul/2016:13:14:02 +0000] "GET /javascripts/bootstrap/tooltip.js?1468805068 HTTP/1.0" 304 - 0.0017
+158.181.40.55 - - [19/Jul/2016:13:14:03 +0000] "GET /javascripts/bootstrap/transition.js?1468805068 HTTP/1.0" 304 - 0.0016
+158.181.40.55 - - [19/Jul/2016:13:14:03 +0000] "GET /javascripts/bootstrap/modal.js?1468805068 HTTP/1.0" 304 - 0.0015
+158.181.40.55 - - [19/Jul/2016:13:14:03 +0000] "GET /javascripts/bootstrap/popover.js?1468805068 HTTP/1.0" 304 - 0.0015
+158.181.40.55 - - [19/Jul/2016:13:14:03 +0000] "GET /stylesheets/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.0" 304 - 0.0015
+158.181.40.55 - - [19/Jul/2016:13:14:03 +0000] "GET /javascripts/bootstrap/scrollspy.js?1468805068 HTTP/1.0" 304 - 0.0015
+158.181.40.55 - - [19/Jul/2016:13:14:03 +0000] "GET /javascripts/bootstrap/tab.js?1468805068 HTTP/1.0" 304 - 0.0017
+158.181.40.55 - - [19/Jul/2016:13:14:03 +0000] "GET /javascripts/application.js?1468805068 HTTP/1.0" 304 - 0.0015
+158.181.40.55 - - [19/Jul/2016:13:14:03 +0000] "GET /images/favicon.ico?1468805068 HTTP/1.0" 304 - 0.0013
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /needs/index
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /layouts/application
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.2ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.1035s[0m) /admin/needs - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:14:17 +0000] "GET /needs HTTP/1.0" 200 86182 0.1068
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT  "needs".* FROM "needs" WHERE "needs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "needs" WHERE "needs"."id" = ?[0m  [["id", 7]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m  DELETE[0m ([1;35m0.0853s[0m) /admin/needs/destroy/7 - [1;9m302[0m Found
+158.181.40.55 - - [19/Jul/2016:13:14:48 +0000] "DELETE /needs/destroy/7 HTTP/1.0" 302 - 0.0866
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /needs/index
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0003s[0m) /layouts/application
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.5ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.4ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.1265s[0m) /admin/needs - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:14:49 +0000] "GET /needs HTTP/1.0" 200 84316 0.1304
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (1, 3, 5)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mBusinessIndex Load (0.2ms)[0m  [1m[34mSELECT "business_indices".* FROM "business_indices" WHERE "business_indices"."id" IN (2, 4, 6)[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /econaider/index
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT "lines".* FROM "lines"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mFactor Load (0.1ms)[0m  [1m[34mSELECT "factors".* FROM "factors"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0117s[0m) /econaider - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:05 +0000] "GET /econaider HTTP/1.0" 200 13877 0.0134
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0074s[0m) /econaider/needs?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:11 +0000] "GET /econaider/needs?line=3 HTTP/1.0" 200 1495 0.0090
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0045s[0m) /econaider/staffs?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:11 +0000] "GET /econaider/staffs?line=3 HTTP/1.0" 200 527 0.0055
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0039s[0m) /econaider/services?line=3 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0040s[0m) /econaider/strategies?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:11 +0000] "GET /econaider/services?line=3 HTTP/1.0" 200 432 0.0101
+158.181.40.55 - - [19/Jul/2016:13:15:11 +0000] "GET /econaider/strategies?line=3 HTTP/1.0" 200 1208 0.0053
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0064s[0m) /econaider/needs?line=1 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:13 +0000] "GET /econaider/needs?line=1 HTTP/1.0" 200 2326 0.0079
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0047s[0m) /econaider/staffs?line=1 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:13 +0000] "GET /econaider/staffs?line=1 HTTP/1.0" 200 1202 0.0058
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0034s[0m) /econaider/services?line=1 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:13 +0000] "GET /econaider/services?line=1 HTTP/1.0" 200 574 0.0044
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0043s[0m) /econaider/strategies?line=1 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:13 +0000] "GET /econaider/strategies?line=1 HTTP/1.0" 200 1216 0.0053
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT  "needs".* FROM "needs" WHERE "needs"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "needs" WHERE "needs"."id" = ?[0m  [["id", 42]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m  DELETE[0m ([1;35m0.0094s[0m) /admin/needs/destroy/42 - [1;9m302[0m Found
+158.181.40.55 - - [19/Jul/2016:13:15:44 +0000] "DELETE /needs/destroy/42 HTTP/1.0" 302 - 0.0107
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /needs/index
+[0;36m  DEBUG[0m - [0;33m[0m [0;33mTEMPLATE[0m ([1;33m0.0002s[0m) /layouts/application
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.2ms)[0m  [1m[34mSELECT "needs".* FROM "needs"[0m
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0826s[0m) /admin/needs - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:45 +0000] "GET /needs HTTP/1.0" 200 82653 0.0859
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0112s[0m) /econaider/needs?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:50 +0000] "GET /econaider/needs?line=3 HTTP/1.0" 200 1495 0.0123
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (3.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0081s[0m) /econaider/staffs?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:50 +0000] "GET /econaider/staffs?line=3 HTTP/1.0" 200 527 0.0113
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0033s[0m) /econaider/services?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:50 +0000] "GET /econaider/services?line=3 HTTP/1.0" 200 432 0.0042
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 3]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0044s[0m) /econaider/strategies?line=3 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:50 +0000] "GET /econaider/strategies?line=3 HTTP/1.0" 200 1208 0.0054
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mNeed Load (0.1ms)[0m  [1m[34mSELECT "needs".* FROM "needs" WHERE "needs"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0069s[0m) /econaider/needs?line=1 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStaff Load (0.1ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs" WHERE "staffs"."line_id" = ?[0m  [["line_id", 1]]
+158.181.40.55 - - [19/Jul/2016:13:15:53 +0000] "GET /econaider/needs?line=1 HTTP/1.0" 200 2189 0.0114
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0097s[0m) /econaider/staffs?line=1 - [1;9m200[0m OK
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mService Load (0.1ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."line_id" = ?[0m  [["line_id", 1]]
+158.181.40.55 - - [19/Jul/2016:13:15:53 +0000] "GET /econaider/staffs?line=1 HTTP/1.0" 200 1202 0.0131
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0052s[0m) /econaider/services?line=1 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:53 +0000] "GET /econaider/services?line=1 HTTP/1.0" 200 574 0.0060
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mLine Load (0.1ms)[0m  [1m[34mSELECT  "lines".* FROM "lines" WHERE "lines"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [1m[36mStrategy Load (0.1ms)[0m  [1m[34mSELECT "strategies".* FROM "strategies" WHERE "strategies"."line_id" = ?[0m  [["line_id", 1]]
+[0;36m  DEBUG[0m - [0;33m[0m [0;35m     GET[0m ([1;35m0.0043s[0m) /econaider/strategies?line=1 - [1;9m200[0m OK
+158.181.40.55 - - [19/Jul/2016:13:15:53 +0000] "GET /econaider/strategies?line=1 HTTP/1.0" 200 1216 0.0053
