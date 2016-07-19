@@ -61,6 +61,9 @@ module Econaider
       error 500 do
         render 'errors/500'
       end
+      get '/' do
+      	"<center>Sinatra knows this ditty :)</center>"
+      end
     #
   end
 end
