@@ -19,7 +19,7 @@
 					<div class="col-md-4">	
 						<div class="form-group">
 							<label>Line</label>
-							<select name="line" onchange="fetchNeeds('needs', this.value); fetchStaffs('staffs', this.value); fetchServices('services', this.value); fetchStrategies('strategies', this.value); revealIndexes();">
+							<select name="line" onchange="fetchNeeds('needs', this.value); fetchStaffs('staffs', this.value); fetchServices('services', this.value); fetchStrategies('strategies', this.value);">
 								<% @lines.each do |line| %>
 									<option value="<%= line.id %>"><%= line.name %></option>
 								<% end %>		
