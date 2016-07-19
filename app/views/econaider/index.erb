@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="well">
+
+			</div>
+		</div>		
+	</div>
+	<div class="section">
+		<form action="/econaider/results">
+			<div class="row">
+					<div class="col-md-4">	
+						<div class="form-group">
+							<label>Line</label>
+							<select name="line" onchange="fetchNeeds('needs', this.value); fetchStaffs('staffs', this.value); fetchServices('services', this.value); fetchStrategies('strategies', this.value); revealIndexes();">
+								<% @lines.each do |line| %>
+									<option value="<%= line.id %>"><%= line.name %></option>
+								<% end %>		
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Place</label>
+							<select name="place">
+								<% @places.each do |place| %>
+									<option value="<%= place.id %>"><%= place.name %></option>
+								<% end %>		
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Area</label>
+							<input type="number" name="line_area" onchange="fetchArea(this.value, 'rooms')">
+						</div>
+						<div class="form-group">
+						<label>Exchange Rate</label>
+							<select name="exchange">
+								<option value="1">
+									AZN/USD
+								</option>
+								<option value="2">
+									AZN/EUR
+								</option>
+								<option value="3">
+									AZN/GBP
+								</option>
+								<option value="4">
+									AZN/TRY
+								</option>
+								<option value="5">
+									AZN/RUR
+								</option>
+								<option value="6">
+									AZN/CHF
+								</option>
+							</select>
+						</div>
+						<div class="form-group">
+						<label>DOO</label>
+								<select name="factor">
+								<% @factors.each do |factor| %>
+									<option value="<%= factor.id %>"><%= factor.economic_year %></option>
+								<% end %>		
+							</select>
+						</div>
+						<div class="form-group">
+							<label>
+								Initial Capital
+							</label>
+							<select id="capital" name="capital_type" onchange="addInputs(this.value)">
+								<option value="1">Personal</option>
+								<option value="2">Credit</option>
+								<option value="3">Mix</option>			
+							</select>
+							<div id='investments'>
+
+							</div>
+							<div id="alerts"></div>
+						</div>
+						<div id="business_indexes" style="display:none;">
+						<div class="form-group">
+								<select name="csi" onchange="writecsidesc(this.value)">
+								<% @csi.each do |cs| %>
+									<option value="<%= cs.id %>"><%= cs.name %></option>
+								<% end %>
+								</select>
+								<label id="csi_desc"></label>								
+						</div>
+						<div class="form-group">
+								<select name="popi" onchange="writepidesc(this.value)">			
+								<% @pop.each do |popi| %>
+									<option value="<%= popi.id %>"><%= popi.name %></option>
+								<% end %>
+								</select>
+								<label id="popi_desc"></label>							
+						</div>
+						</div>
+						<input type="hidden" name="staffs" id="expense_staffs" value="">
+						<input type="hidden" name="needs" id="expense_needs" value="">
+						<input type="hidden" name="ads" id="expense_ads" value="">
+					</div>
+					<div class="col-md-4">
+						<table class="table table-hover table-striped table-condensed" id='needs'>
+						</table>	
+					</div>	
+					<div class="col-md-4">
+						<p>
+							<input type="submit" value="submit">
+						</p>
+						<div class="row">
+							<div class="col-md-12">
+								<table class="table table-hover table-striped table-condensed" id='strategies'>
+									
+								</table>
+							</div>
+						</div>
+					</div>
+			</div>			
+			
+			<div class="row">	
+				<div class="col-md-4">
+					<div class="well">
+					<table class="table table-hover table-striped table-condensed" id="staffs">
+						
+					</table>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="well">
+								<div class="pull-right">
+									<label>Growth</label>
+									<select name="growth">
+										<option value="0">Stable</option>
+										<option value="1">Rapid</option>
+									</select>
+								</div>
+					<table class="table table-hover table-striped table-condensed" id="services">
+						
+					</table>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="well">
+					<table class="table table-hover table-striped table-condensed" id="rooms">
+
+					</table>
+					</div>
+				</div>
+			</div>	
+
+		</form>
+	</div>
+</div>
+	<script type="text/javascript">
+		
+		revealIndexes = function() {
+			document.getElementById("business_indexes").style.display = "block";
+		}
+
+		function indexdesc(x, d) {
+		 	var l = document.querySelector("[name=line]").value;
+
+		 	var xhr = new XMLHttpRequest();
+	
+			xhr.onreadystatechange = function(){
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				var resp = JSON.parse(xhr.response);
+				document.getElementById(d).innerHTML = resp;
+			}
+		};
+			xhr.open("GET", '/econaider/index_description?idx='+x+'&line='+l, true);
+			xhr.send();
+
+		}
+
+		 function writecsidesc(x) {
+		 	return indexdesc(x, "csi_desc");
+		}
+
+		function writepidesc(x) {
+			return indexdesc(x, "popi_desc");
+		}
+
+
+		function needsSum() {
+			var nrows = document.getElementById('needs').rows;
+			var sum =0; var i=0;
+			while(i<nrows.length) {				  
+				sum += parseFloat(nrows[i].cells[3].innerHTML);
+				i++;
+			}
+			document.getElementById('expense_needs').value = sum;	
+		}
+
+		function staffsSum() {
+			var nrows = document.getElementById('staffs').rows;
+			var sum =0; var i=0;
+			while(i<nrows.length) {				  
+				sum += parseFloat(nrows[i].cells[3].innerHTML);
+				i++;
+			}
+			document.getElementById('expense_staffs').value = sum;	
+		}
+
+
+		function strategiesSum() {
+			var nrows = document.getElementById('strategies').rows;
+			var sum =0; var i=0;
+			while(i<nrows.length) {				  
+				sum += parseFloat(nrows[i].cells[3].innerHTML);
+				i++;
+			}
+			document.getElementById('expense_ads').value = sum;	
+		}
+
+		function addInputs(i) {
+
+    		var area = document.getElementById('investments');
+			if (i=='1') {
+				area.innerHTML = "<input type='number' name='personal_cap' id='personal' placeholder='your investment' onchange='sufficiency()'>";
+			} 
+			else if (i=='2') {
+				area.innerHTML = "<input type='number' id='credit' onchange='sufficiency()' name='credit_amount' placeholder='loan'>";	
+			}
+			 else {
+				area.innerHTML = "<input type='number' onchange='sufficiency()' id='personal' name='personal_cap' placeholder='your investment'>";
+				area.innerHTML += "<input type='number' id='credit' onchange='sufficiency()' name='credit_amount' placeholder='loan'>";
+			}
+		}
+		addInputs(1);
+		function sufficiency() {
+			var area = document.getElementById('investments');
+			var alerts = document.getElementById('alerts');
+			var inps = area.getElementsByTagName('input');
+			var sum = 0;
+			for(var i=0; i<inps.length; i++) {
+				if(isNaN(parseFloat(inps[i].value))) {
+					sum +=0
+				} else {
+					sum += parseFloat(inps[i].value);
+				}
+			}
+			if (sum>1500) {
+				alerts.innerHTML = "<p class='alert alert-success'>Sufficient Funds</p>";
+			} else {
+				alerts.innerHTML = "<p class='alert alert-danger'>Insufficient Funds</p>";
+
+			}
+		}
+
+		function writeneedssum(i) {
+			var tbl = document.getElementById('needs');
+
+			var tr = tbl.rows[i];
+			var pr = parseFloat(tr.cells[1].innerHTML);
+			var qty = parseFloat(tr.cells[2].getElementsByTagName('input')[0].value);
+			var total = pr*qty;
+			tr.cells[3].innerHTML = total;
+
+			needsSum();
+		}
+
+		function writestaffssum(i) {
+			var tbl = document.getElementById('staffs');
+
+			var tr = tbl.rows[i];
+			var pr = parseFloat(tr.cells[1].innerHTML);
+			var qty = parseFloat(tr.cells[2].getElementsByTagName('input')[0].value);
+			var total = pr*qty;
+			tr.cells[3].innerHTML = total;
+
+			staffsSum();
+		}
+
+		function writestrsum(i) {
+			var tbl = document.getElementById('strategies');
+
+			var tr = tbl.rows[i];
+			var pr = parseFloat(tr.cells[1].innerHTML);
+			var qty = parseFloat(tr.cells[2].getElementsByTagName('input')[0].value);
+			var total = pr*qty;
+			tr.cells[3].innerHTML = total;
+
+			strategiesSum();
+		}
+
+
+		function writesrvsum(i) {
+			var tbl = document.getElementById('services');
+
+			var tr = tbl.rows[i];
+			var pr = parseFloat(tr.cells[1].getElementsByTagName('input')[0].value);
+			var qty = parseFloat(tr.cells[2].getElementsByTagName('input')[0].value);
+			var total = pr*qty;
+			tr.cells[3].getElementsByTagName('input')[0].value = total;
+			
+		}
+
+		function fetchArea(a, d) {
+			var lid = document.getElementsByTagName("select")[0].value;
+			var area = document.getElementById(d);
+			area.innerHTML = "";
+
+			var xhr = new XMLHttpRequest();
+
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4 && xhr.status == 200) {
+					var resp = JSON.parse(xhr.response);
+					var i=0;
+					for(var k in resp) {
+						var r = area.insertRow(i);
+						var room_name = r.insertCell(0);
+						room_name.innerHTML = k;
+						var ar = r.insertCell(1);
+						ar.innerHTML = resp[k];
+					}
+				}
+			};
+			xhr.open("GET", '/econaider/rooms_division?area='+a+'&line='+lid, true);
+			xhr.send();
+		}
+
+		function fetchNeeds(d, id) {
+			var area = document.getElementById(d);
+			area.innerHTML = "";
+			var xhr = new XMLHttpRequest();
+
+			xhr.onreadystatechange = function(){
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				var resp = JSON.parse(xhr.response);
+				for (var i=0; i<resp.length; i++) {
+
+					var r = area.insertRow(i);
+					var need_name = r.insertCell(0);
+					need_name.innerHTML = resp[i]['name']
+					var need_price = r.insertCell(1);
+					need_price.innerHTML = resp[i]['price']
+					var need_qty = r.insertCell(2);
+					need_qty.innerHTML = "<input class='form-control input-sm' type='number' value='0' onchange='writeneedssum("+i+")'>"
+					var need_total = r.insertCell(3);
+					need_total.innerHTML = "0";
+				}
+
+			}
+		};
+			xhr.open("GET", '/econaider/needs?line='+id, true);
+			xhr.send();
+		}
+
+		function fetchStrategies(d, id) {
+			var area = document.getElementById(d);
+			area.innerHTML = "";
+			var xhr = new XMLHttpRequest();
+
+			xhr.onreadystatechange = function(){
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				var resp = JSON.parse(xhr.response);
+				for (var i=0; i<resp.length; i++) {
+
+					var r = area.insertRow(i);
+					var need_name = r.insertCell(0);
+					need_name.innerHTML = resp[i]['name']
+					var need_price = r.insertCell(1);
+					need_price.innerHTML = resp[i]['price']
+					var need_qty = r.insertCell(2);
+					need_qty.innerHTML = "<input class='form-control input-sm' type='number' onchange='writestrsum("+i+")' value='0'>"
+					var need_total = r.insertCell(3);
+					need_total.innerHTML = "0";	
+				}
+
+			}
+		};
+			xhr.open("GET", '/econaider/strategies?line='+id, true);
+			xhr.send();
+		}
+
+
+		function fetchStaffs(d, id) {
+			var area = document.getElementById(d);
+			area.innerHTML = "";
+			var xhr = new XMLHttpRequest();
+
+			xhr.onreadystatechange = function(){
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				var resp = JSON.parse(xhr.response);
+				for (var i=0; i<resp.length; i++) {
+
+					var r = area.insertRow(i);
+					var need_name = r.insertCell(0);
+					need_name.innerHTML = resp[i]['name']
+					var need_price = r.insertCell(1);
+					need_price.innerHTML = resp[i]['wage']
+					var need_qty = r.insertCell(2);
+					need_qty.innerHTML = "<input class='form-control input-sm' type='number' value='0' onchange='writestaffssum("+i+")'>"
+					var need_total = r.insertCell(3);
+					need_total.innerHTML = "0";
+				}
+
+			}
+		};
+			xhr.open("GET", '/econaider/staffs?line='+id, true);
+			xhr.send();
+		}
+
+
+		function fetchServices(d, id) {
+			var area = document.getElementById(d);
+			area.innerHTML = "";
+			var xhr = new XMLHttpRequest();
+
+			xhr.onreadystatechange = function(){
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				var resp = JSON.parse(xhr.response);
+				for (var i=0; i<resp.length; i++) {
+					var sid = resp[i]['id'];
+					var r = area.insertRow(i);
+					var need_name = r.insertCell(0);
+					need_name.innerHTML = resp[i]['name'];
+					var need_qty = r.insertCell(1);
+					need_qty.innerHTML = "<input class='form-control input-sm' type='number' onchange='writesrvsum("+i+")' value='0'>";
+					var serv_qty = r.insertCell(2);
+					serv_qty.innerHTML = "<input class='form-control input-sm' type='number' onchange='writesrvsum("+i+")' value='0'>";
+					var serv_total = r.insertCell(3);
+					serv_total.innerHTML = "<input type='hidden' name='services["+sid+"]'>";
+				}
+
+			}
+		};
+			xhr.open("GET", '/econaider/services?line='+id, true);
+			xhr.send();
+		}
+
+	</script>	
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="http://underscorejs.org/underscore.js"></script>
+</body>
+</html>

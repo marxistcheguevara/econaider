@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="http://underscorejs.org/underscore.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+	<div class="container">		
+		<div class="section">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="well" style="width:100%">
+						<h1>General</h1>
+						<p class="pull-right">
+							<form>
+						<div class="form-group">
+								<select name="csi" onchange="writecsidesc(this.value); redCsi(this.value);">
+								<% @csindexes.each do |cs| %>
+									<option value="<%= cs.id %>"><%= cs.name %></option>
+								<% end %>
+								</select>
+								<label id="csi_desc"></label>								
+						</div>
+						<div class="form-group">
+								<select name="popi" onchange="writepidesc(this.value);redPopi(this.value);">			
+								<% @poindexes.each do |popi| %>
+									<option value="<%= popi.id %>"><%= popi.name %></option>
+								<% end %>
+								</select>
+								<label id="popi_desc"></label>							
+						</div>
+
+							</form>
+						</p>
+						<table class="table table-bordered  table-condensed table-striped table-hover">
+							<thead>
+								<tr>
+									<td>Name of expense</td>
+									<% (1..12).to_a.each do |m| %>
+										<td><%= "m#{m}" %></td>
+									<% end %>
+								</tr>
+							</thead>
+							<tbody>
+								<tr id="revenues">
+									<td class="success">Revenue</td>
+									<% 12.times do |m| %>
+										<td class="success"><%= "#{'%.2f' %(@inc+@inc*m*@gtype+@inc*@csi_rate*m+@inc*@popi_rate*m)}" %></td>
+									<% end %>
+								</tr>
+								<tr id="admin_exp">
+									<td class="danger">Admin. Exp</td>
+									<% 12.times do |m| %>
+										<td class="danger"></td>
+									<% end %>
+								</tr>							
+								<tr id="emp_salary">
+									<td class="danger">Emp. salary</td>
+									<% 12.times do |m| %>
+										<td class="danger"><%= @salary %></td>
+									<% end %>
+								</tr>
+								<tr id="util_cost">
+									<td class="danger">Utility cost</td>
+									<% 12.times do |m| %>
+										<td class="danger"><%= @uc %></td>
+									<% end %>
+								</tr>
+								<tr id="adv">
+									<td class="danger">Advertising</td>
+									<td class="danger"><%= @ads %></td>
+									<% 11.times do |m| %>
+										<td class="danger"><%= (@ads/5)+(@ads*m/100) %></td>
+									<% end %>
+								</tr>
+								<tr id="rent">
+									<td class="danger">Rent</td>
+									<% 12.times do |m| %>
+										<td class="danger"><%= @rent %></td>
+									<% end %>
+								</tr>
+								<tr id="rep_main">
+									<td class="danger">Repair & maintenance </td>
+									<td class="danger"><%= @rm %></td>
+									<% 11.times do |m| %>
+										<% if @line.id.eql?(9) %>
+										<td class="danger"><%= 18.18 %></td>
+										<% elsif (@line.id.eql?(8) || @line.id.eql?(7)) %>
+										<td class="danger"><%= @rm %></td>
+										<% else %>
+										<td class="danger"><%= 100 %></td>
+										<% end %>
+									<% end %>
+								</tr>
+								<tr id="office_misc">
+									<td class="danger">Office & misc</td>
+									<td class="danger"><%= @om %></td>
+									<% 11.times do |m| %>
+										<% if @line.name.start_with?("Book") %>
+										<td class="danger"><%= (@om/4)+(@om*m/50) %></td>
+										<% else %>
+										<td class="danger"><%= 100 %></td>
+										<% end %>
+									<% end %>
+								</tr>
+								<tr id="ebit">
+									<td class="success">EBIT</td>
+									<% 6.times do |m| %>
+										<td class="info">0</td>
+									<% end %>
+									<% 6.times do |m| %>
+										<td class="success"></td>
+									<% end %>
+								</tr>							
+								<tr id="taxes">
+									<td class="danger">Tax</td>
+									<% 12.times do |m| %>
+										<td class="danger"></td>
+									<% end %>
+								</tr>
+								<tr id="net_income">
+									<td class="info">Net Income</td>
+									<% 12.times do |m| %>
+										<td class="info"></td>
+									<% end %>
+								</tr>
+							</tbody>
+						</table>
+					<hr>
+					<p class="pull-right">
+						<strong>Income after optimization for the year:</strong> 
+						<span class="badge" id="after_ebit"></span> 
+					</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="well">
+					<table id="general" class="table table-bordered table-condensed table-striped">
+						<thead>
+							<tr>
+								<td></td>
+								<td>Pessimistic</td>
+								<td>Expected</td>
+								<td>Optimistic</td>
+							</tr>
+						</thead>
+						<tr>
+							<td>Beginning Cash Balance</td>
+							<td><%= @total_capital - @total_capital*@prate/100 %></td>
+							<td><%= @total_capital %></td>
+							<td><%= @total_capital + @total_capital*@orate/100 %></td>
+						</tr>
+						<tr>
+							<td>Cash inflows(Income)</td>
+							<td>0</td>
+							<td id="cinflow">0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Sale</td>
+							<td></td>
+							<td id="cisale"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Available cash balance</td>
+							<td></td>
+							<td id="acb"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Cash outflows</td>
+							<td>0</td>
+							<td id="coutflow">0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Rent payment</td>
+							<td></td>
+							<td id="cirent"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Empl. salary</td>
+							<td></td>
+							<td id="ciemp"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Office supplies</td>
+							<td></td>
+							<td id="cios"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Utility cost</td>
+							<td></td>
+							<td id="ciucost"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Office & misc</td>
+							<td></td>
+							<td id="ciomisc"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Advertising</td>
+							<td></td>
+							<td id="ciadv"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Repair & maintenance</td>
+							<td></td>
+							<td id="cirmain"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Insurance</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Tax</td>
+							<td></td>
+							<td id="citax"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Total cash outflow</td>
+							<td></td>
+							<td id="citcoutflow"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Ending cash balance</td>
+							<td></td>
+							<td id="ciendcbal"></td>
+							<td></td>
+						</tr>
+					</table>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="well">
+						<table class="table table-bordered table-condensed">
+							<tr>
+								<td class="info">Payback period</td>
+								<td id="payback"></td>
+							</tr>
+							<tr>
+								<td class="info">NPV</td>
+								<td id="npv"></td>								
+							</tr>
+							<tr>
+								<td class="info">IRR</td>
+								<td id="irr">Project should not be undertaken</td>								
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="well">
+						<div id="container"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		function getParameterByName(name, url) {
+		    if (!url) url = window.location.href;
+		    name = name.replace(/[\[\]]/g, "\\$&");
+		    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		        results = regex.exec(url);
+		    if (!results) return null;
+		    if (!results[2]) return '';
+		    return decodeURIComponent(results[2].replace(/\+/g, " "));
+		}
+
+
+		var orate = parseFloat("<%= @orate %>");
+		var prate = parseFloat("<%= @prate %>");
+
+		function monthly_loan_payment(){
+			var credit_amount = parseFloat("<%= ((@credit_amount + @cp*@credit_amount*0.01)/12).round(2) %>");
+			return credit_amount;
+		} 
+
+		function sum_of_array(arr) {
+			return arr.reduce((a,b)=>a+b);
+		} 
+
+		function calculateTaxes() {
+			var tcells = document.getElementById('revenues').cells;
+			var taxes = document.getElementById('taxes').cells
+			var tm = "<%= @tr %>";
+			var tr = parseFloat(tm);
+			
+			for(var i=1; i<tcells.length; i++) {
+				taxes[i].innerHTML = (0.01*tr*parseFloat(tcells[i].innerHTML)).toFixed(2);
+			}
+
+		}
+
+		function calculateEbit() {
+			var tcells = document.getElementById('revenues').cells;
+			var taxes = document.getElementById('ebit').cells
+			
+			var tr = 45;
+						
+			for(var i=7; i<tcells.length; i++) {
+				taxes[i].innerHTML = (0.01*tr*parseFloat(tcells[i].innerHTML)).toFixed(2);
+			}
+
+		}
+		function cae() {
+			var salaries = ([].slice.call(document.getElementById("emp_salary").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var utility_costs = ([].slice.call(document.getElementById("util_cost").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var adv = ([].slice.call(document.getElementById("adv").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var rent = ([].slice.call(document.getElementById("rent").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var of_msc = ([].slice.call(document.getElementById("office_misc").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var taxes =  ([].slice.call(document.getElementById("taxes").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var rep_main =  ([].slice.call(document.getElementById("rep_main").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+
+			var monthly_expenses_raw = _.zip(salaries, utility_costs, rep_main, adv, rent, of_msc, taxes);
+
+			var monthly_expenses = monthly_expenses_raw.map(e=>sum_of_array(e));
+			return monthly_expenses;
+
+		}
+
+		function calculateAdminExpenses() {
+			var monthly_expenses = cae();
+
+			for(var j=0; j<monthly_expenses.length; j++) {
+				document.getElementById("admin_exp").cells[j+1].innerHTML = (monthly_expenses[j]+monthly_loan_payment()).toFixed(2); 
+			}
+
+		}
+
+		function calculateNetIncome() {
+			var ad_ex = ([].slice.call(document.getElementById("admin_exp").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+
+			var rev = ([].slice.call(document.getElementById("revenues").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+
+			var ebit = ([].slice.call(document.getElementById("ebit").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			
+			for(var j=0; j<ad_ex.length; j++) {
+					var d = ebit[j]+rev[j]-ad_ex[j];					
+					document.getElementById("net_income").cells[j+1].innerHTML = d.toFixed(2); 
+				}			
+		}
+
+
+		function total_sales() {
+			var ni = ([].slice.call(document.getElementById("revenues").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var o = sum_of_array(ni) 
+			var curr = document.getElementById("cisale");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = o-o*prate*0.01;
+			curr.parentNode.cells[3].innerHTML = o+o*orate*0.01;
+			return o;
+		}
+
+		function avail_cash_balance() {
+			var p = document.getElementById("general");
+			var prows = [].slice.call(p.rows).slice(1,4).map(e=>parseFloat(e.cells[2].innerHTML));
+
+			var o = sum_of_array(prows) 
+			var curr = document.getElementById("acb");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = o-o*prate*0.01;
+			curr.parentNode.cells[3].innerHTML = o+o*orate*0.01;
+			return o;		
+		}
+
+		function total_cash_outflow() {
+			var p = document.getElementById("general");
+			var prows = [].slice.call(p.rows).slice(6, 15).map(e=>parseFloat(e.cells[2].innerHTML));
+
+			var o = parseFloat((sum_of_array(prows)).toFixed(2)); 
+			var curr = document.getElementById("citcoutflow");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = (o-o*prate*0.01).toFixed(2);
+			curr.parentNode.cells[3].innerHTML = (o+o*orate*0.01).toFixed(2);
+			return o;		
+		}
+
+		function ending_cash_balance() {
+			var p = document.getElementById("general");
+			var tco = [].slice.call(p.rows).slice(15, 16).map(e=>(-1*parseFloat(e.cells[2].innerHTML)));
+			var acb = [].slice.call(p.rows).slice(4, 5).map(e=>parseFloat(e.cells[2].innerHTML));
+
+			var o = sum_of_array(_.flatten([tco, acb])); 
+			var curr = document.getElementById("ciendcbal");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = (o-o*prate*0.01).toFixed(2);
+			curr.parentNode.cells[3].innerHTML = (o+o*orate*0.01).toFixed(2);
+			return o;		
+		}
+
+
+
+		function renta() {
+			var rent = ([].slice.call(document.getElementById("rent").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var o = sum_of_array(rent); 
+			var curr = document.getElementById("cirent");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = o-o*prate*0.01;
+			curr.parentNode.cells[3].innerHTML = o+o*orate*0.01;
+			return o;			
+		}
+		function empsal() {
+			var rent = ([].slice.call(document.getElementById("emp_salary").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var o = sum_of_array(rent); 
+			var curr = document.getElementById("ciemp");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = o-o*prate*0.01;
+			curr.parentNode.cells[3].innerHTML = o+o*orate*0.01;
+			return o;			
+		}
+		function offsup() {
+			var o = parseFloat("<%= @needs %>");			 
+			var curr = document.getElementById("cios");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = o-o*prate*0.01;
+			curr.parentNode.cells[3].innerHTML = o+o*orate*0.01;
+			return o;			
+		}
+		function utilitycost() {
+			var rent = ([].slice.call(document.getElementById("util_cost").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var o = sum_of_array(rent); 
+			var curr = document.getElementById("ciucost");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = o-o*prate*0.01;
+			curr.parentNode.cells[3].innerHTML = o+o*orate*0.01;
+			return o;			
+		}
+		function offmisc() {
+			var rent = ([].slice.call(document.getElementById("office_misc").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var o = sum_of_array(rent); 
+			var curr = document.getElementById("ciomisc");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = o-o*prate*0.01;
+			curr.parentNode.cells[3].innerHTML = o+o*orate*0.01;
+			return o;			
+		}
+
+		function advertising() {
+			var rent = ([].slice.call(document.getElementById("adv").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var o = sum_of_array(rent); 
+			var curr = document.getElementById("ciadv");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = o-o*prate*0.01;
+			curr.parentNode.cells[3].innerHTML = o+o*orate*0.01;
+			return o;			
+		}
+
+		function repmaint() {
+			var rent = ([].slice.call(document.getElementById("rep_main").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var o = sum_of_array(rent); 
+			var curr = document.getElementById("cirmain");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = o-o*prate*0.01;
+			curr.parentNode.cells[3].innerHTML = o+o*orate*0.01;
+			return o;			
+		}
+
+		function txs() {
+			var rent = ([].slice.call(document.getElementById("taxes").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var o = parseFloat((sum_of_array(rent)).toFixed(2)); 
+			var curr = document.getElementById("citax");
+			curr.innerHTML = o;
+			curr.parentNode.cells[1].innerHTML = o-o*prate*0.01;
+			curr.parentNode.cells[3].innerHTML = o+o*orate*0.01;
+			return o;				
+		}
+
+		function ni() {
+			var ni = ([].slice.call(document.getElementById("net_income").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var o = sum_of_array(ni)
+			
+			if(o<0){ 
+				document.getElementById("payback").innerHTML = "Project will not payback";
+			} else {
+				var sm =0;
+				for(var i=0; i<ni.length; i++) {
+					sm  = sm + ni[i];
+					if(sm>0){
+	 				document.getElementById("payback").innerHTML = "Project will start to pay back after <span class='badge'>m"+i+"</span>";
+	 				break;	
+					}
+				}
+			}
+			return o;
+		}
+
+/*
+
+var sm = 0; for(var i=0; i<r.length; i++) {
+  sm = sm+r[i];
+  if(sm>0) {
+  alert(i);
+}console.log(sm)
+}
+*/
+		function indexdesc(x, d) {
+
+		 	var l = getParameterByName("line");
+
+		 	var xhr = new XMLHttpRequest();
+	
+			xhr.onreadystatechange = function(){
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				var resp = JSON.parse(xhr.response);
+				document.getElementById(d).innerHTML = resp;
+			}
+		};
+			xhr.open("GET", '/econaider/index_description?idx='+x+'&line='+l, true);
+			xhr.send();
+
+		}
+
+var a_href = window.location.href;
+
+function redCsi(x) {
+ 	a_href = a_href.replace(/(csi=)[^\&]+/, '$1' + x);
+ 	window.location.href = a_href;	
+}
+
+function redPopi(x) {
+ 	a_href = a_href.replace(/(popi=)[^\&]+/, '$1' + x);
+	window.location.href = a_href;
+}
+
+		 function writecsidesc(x) {
+		 	indexdesc(x, "csi_desc");
+
+		}
+
+		function writepidesc(x) {
+			indexdesc(x, "popi_desc");
+		 	// a_href = a_href.replace(/(popi=)[^\&]+/, '$1' + x);
+		 	// window.location.href = a_href;
+		 	// return false;
+		}
+
+		function wl() {
+			var c = parseInt(getParameterByName("csi"));
+			var p = parseInt(getParameterByName("popi"));
+			document.querySelector("[name=csi]").value = c;
+			writecsidesc(c);
+			document.querySelector("[name=popi]").value = p;
+			writepidesc(p);
+		}
+
+		wl();
+
+		function ebitsum() {
+			var ni = ([].slice.call(document.getElementById("ebit").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			document.getElementById("after_ebit").innerHTML = sum_of_array(ni);
+			return sum_of_array(ni);
+		}
+
+		function calculatenpv() {
+			var dr = parseFloat("<%= @dr %>");
+			var total_initial_investment = parseFloat("<%= @total_capital %>");
+			var ad_ex = ([].slice.call(document.getElementById("revenues").cells)).slice(1,13).map(e=>parseFloat(e.innerHTML));
+			var t = []; 
+			for(var i=1; i<13; i++) { 
+				t.push(Math.pow(1+dr/100, i)); 
+			}
+			var s = 0;
+			var j=0;
+			while(j<12) {
+				s+=(ad_ex[j]/t[j]);
+				j++;
+			}
+			document.getElementById("npv").innerHTML = (s-total_initial_investment).toFixed(2);
+		}
+
+		calculateTaxes();
+		calculateEbit();
+		calculateAdminExpenses();
+		calculateNetIncome();
+		function addNeeds() {
+			var n = parseFloat("<%= @needs %>");			
+			var c = parseFloat(document.getElementById("admin_exp").cells[1].innerHTML)
+			document.getElementById("admin_exp").cells[1].innerHTML = n+c;
+		}
+var x = [].slice.call(document.getElementsByTagName("table")[0].tHead.rows[0].cells).slice(1,13).map(e=>e.innerHTML);
+var ser = [].slice.call(document.getElementById("net_income").cells).slice(1,13).map(e=>parseFloat(e.innerHTML));
+var opt = ser.map(e=>(e + Math.abs(e)*orate/100));
+var pes = ser.map(e=>(e - Math.abs(e)*prate/100));
+		$('#container').highcharts({
+
+				title: {
+					text: 'Net Income Chart'
+				},
+
+				yAxis: {
+					min: pes[0], minRange: 10000, 
+				},
+
+				xAxis: {
+					categories: x 
+				},
+
+				series: [
+				{
+					name: 'expected',
+					data: ser
+				},
+				{
+					name: 'pessimistic',
+					data: pes
+				},
+				{	
+					name: 'optimistic',
+					data: opt
+				},
+				]
+
+			});
+
+		addNeeds();
+		ni();
+		ebitsum();
+		calculatenpv();
+		total_sales();
+		avail_cash_balance();
+		renta();
+		empsal();
+		offsup();
+		utilitycost();
+		offmisc();
+		advertising();
+		repmaint();
+		txs();
+		total_cash_outflow();
+		ending_cash_balance();
+	</script>
+</body>
+</html>

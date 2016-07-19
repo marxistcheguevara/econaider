@@ -1,0 +1,64 @@
+<% error = @factor.errors.include?(:economic_year) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :economic_year, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :economic_year, :class => 'form-control input-xlarge input-with-feedback', :autofocus => true %>
+    <span class='help-inline'><%= error ? f.error_message_on(:economic_year) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @factor.errors.include?(:inflation_rate) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :inflation_rate, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :inflation_rate, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:inflation_rate) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @factor.errors.include?(:tax_rate) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :tax_rate, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :tax_rate, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:tax_rate) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @factor.errors.include?(:credit_percentage_rate) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :credit_percentage_rate, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :credit_percentage_rate, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:credit_percentage_rate) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @factor.errors.include?(:discount_rate) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :discount_rate, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :discount_rate, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:discount_rate) : "Will be used in NPV/IRR calculation" %></span>
+  </div>
+</fieldset>
+<% error = @factor.errors.include?(:optimistic_rate) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :optimistic_rate, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :optimistic_rate, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:optimistic_rate) : "Optimistic prediction difference from expected" %></span>
+  </div>
+</fieldset>
+<% error = @factor.errors.include?(:pessimistic_rate) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :pessimistic_rate, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :pessimistic_rate, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:pessimistic_rate) : "Pessimistic prediction difference from expected" %></span>
+  </div>
+</fieldset>
+
+<div class="form-actions">
+  <%= f.submit pat(:save), :class => 'btn btn-primary' %>
+  &nbsp;
+  <%= f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue' %>
+  &nbsp;
+  <%= link_to pat(:cancel), url(:factors, :index), :class => 'btn btn-default' %>
+</div>

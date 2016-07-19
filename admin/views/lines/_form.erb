@@ -1,0 +1,33 @@
+<% error = @line.errors.include?(:name) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :name, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :name, :class => 'form-control input-xlarge input-with-feedback', :autofocus => true %>
+    <span class='help-inline'><%= error ? f.error_message_on(:name) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @line.errors.include?(:p_index) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :p_index, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :p_index, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:p_index) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @line.errors.include?(:cs_index) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :cs_index, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :cs_index, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:cs_index) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+
+
+<div class="form-actions">
+  <%= f.submit pat(:save), :class => 'btn btn-primary' %>
+  &nbsp;
+  <%= f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue' %>
+  &nbsp;
+  <%= link_to pat(:cancel), url(:lines, :index), :class => 'btn btn-default' %>
+</div>

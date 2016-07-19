@@ -1,0 +1,49 @@
+<% error = @business_index.errors.include?(:name) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :name, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :name, :class => 'form-control input-xlarge input-with-feedback', :autofocus => true %>
+    <span class='help-inline'><%= error ? f.error_message_on(:name) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @business_index.errors.include?(:inc_rate) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :inc_rate, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :inc_rate, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:inc_rate) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @business_index.errors.include?(:text_fitness) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :text_fitness, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :text_fitness, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:text_fitness) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @business_index.errors.include?(:text_education) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :text_education, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :text_education, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:text_education) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+<% error = @business_index.errors.include?(:text_bookstore) %>
+<fieldset class='control-group <%= error ? 'has-error' : ''%>'>
+  <%= f.label :text_bookstore, :class => 'control-label' %>
+  <div class='controls'>
+    <%= f.text_field :text_bookstore, :class => 'form-control input-xlarge input-with-feedback' %>
+    <span class='help-inline'><%= error ? f.error_message_on(:text_bookstore) : "Ex: a simple text" %></span>
+  </div>
+</fieldset>
+
+
+<div class="form-actions">
+  <%= f.submit pat(:save), :class => 'btn btn-primary' %>
+  &nbsp;
+  <%= f.submit pat(:save_and_continue), :class => 'btn btn-info', :name => 'save_and_continue' %>
+  &nbsp;
+  <%= link_to pat(:cancel), url(:business_indices, :index), :class => 'btn btn-default' %>
+</div>
